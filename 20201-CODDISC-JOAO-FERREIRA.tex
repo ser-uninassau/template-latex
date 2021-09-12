@@ -6,7 +6,7 @@
 % ------------------------------------------------------------------------------
 % Template para aulas da UNINASSAU
 % Autor: João Ferreira da Silva Júnior
-% Versão: 0.1 - 2020-03-27
+% Versão: 0.2 - 2021-09-12
 % ------------------------------------------------------------------------------
 
 
@@ -270,7 +270,7 @@
 % Macros do documento
 \def\universidade{UNINASSAU}
 
-\def\idcurso{31}
+\def\idcurso{99}
 \def\curso{Nome do Curso Superior}
 
 \def\iddisciplina{CODDISC}
@@ -286,7 +286,7 @@
 \def\diadaaula{}
 \def\mesdaaula{}
 \def\anodaaula{}
-\def\semestre{2020-1}
+\def\semestre{2021-2}
 % \def\data{\diadaaula~de~\mesdaaula~de~\anodaaula}
 \def\data{Semestre: \semestre}
 
@@ -469,9 +469,9 @@
 \begin{frame}[allowframebreaks,t]
 % \begin{frame}[t]\frametitle{Agenda}
 
-  \tableofcontents{}
+  % \tableofcontents{}
   % \tableofcontents[sectionstyle=show/hide/shaded,subsectionstyle=show/hide/shaded]
-  % \tableofcontents[sectionstyle=show,subsectionstyle=show]
+  \tableofcontents[sectionstyle=show,subsectionstyle=show]
   % \tableofcontents[hideallsubsections]
   % \tableofcontents[currentsection,currentsubsection]
 
@@ -491,21 +491,27 @@
 % ------------------------------------------------------------------------------
 \include{20201-CODDISC-SEC01-PROFESSOR}
 
-\include{20201-CODDISC-SEC02-EMENTA}
+\include{20201-CODDISC-SEC02-PLANO-ENSINO}
 
 \include{20201-CODDISC-SEC03-PLANEJAMENTO}
 
-\include{20201-CODDISC-SEC04-AULA01}
+\include{20201-CODDISC-SEC04-INTRODUCAO}
 
-\include{20201-CODDISC-SEC05-AULA02}
+\include{20201-CODDISC-SEC05-TEMA01}
 
-\include{20201-CODDISC-SEC06-LISTA01}
+\include{20201-CODDISC-SEC06-TEMA02}
 
-\include{20201-CODDISC-SEC07-AULA03}
+\include{20201-CODDISC-SEC07-TEMA03}
 
-\include{20201-CODDISC-SEC08-AULA04}
+\include{20201-CODDISC-SEC08-TEMA04}
 
-\include{20201-CODDISC-SEC09-LISTA02}
+\include{20201-CODDISC-SEC99-LISTA01}
+
+\include{20201-CODDISC-SEC99-LISTA02}
+
+\include{20201-CODDISC-SEC99-PROJETO01}
+
+\include{20201-CODDISC-SEC99-PROJETO02}
 
 
 
@@ -576,12 +582,34 @@
 
 
 {\usebackgroundtemplate{{\transparent{0.2}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-branco.png}}}
+  % \begin{frame}[allowframebreaks,t]%\frametitle{Referências ---}
   \begin{frame}[plain,allowframebreaks,t]%\frametitle{Referências ---}
   % \begin{frame}[plain,t]%\frametitle{Referências}
-    % \bibliographystyle{apalike}
-    \bibliography{library.bib}
+  % \begin{frame}[plain]%\frametitle{Referências}
+
+    \vfill
+    \centering
+
+    \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
+    % \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!50!white}
+    \begin{block}{}
+      \centering{}
+      \Huge{\textbf{Referências}}
+    \end{block}
+
+    \vfill
+
   \end{frame}
 } % usebackgroundtemplate
+
+
+% \begin{frame}[allowframebreaks,t]\frametitle{Referências ---}
+\begin{frame}[t]\frametitle{Referências}
+
+  \bibliography{library.bib}
+
+\end{frame}
 
 
 
